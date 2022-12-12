@@ -12,10 +12,11 @@ const connect = function () {
   conn.on("data", (data) => {
     console.log("server says:", data);
   });
-// when connection established it will run the fucntion inside it 
+// when connection established it will run the function inside it 
   conn.on("connect", () => {
     console.log("Successfully connected to game server")
-    conn.write('Name: JEN')
+    conn.write('Name: Jes'); 
+    conn.write("Move: up"); 
   }); 
   
   return conn;
@@ -24,3 +25,10 @@ const connect = function () {
 module.exports = {
   connect,
 }; 
+
+/*
+"Move: up" - move up one square (unless facing down)
+"Move: down" - move down one square (unless facing up)
+"Move: left" - move left one square (unless facing right)
+"Move: right" - move left one square (unless facing left)
+*/
