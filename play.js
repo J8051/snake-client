@@ -1,7 +1,7 @@
 const { Server } = require("http");
 const { connect } = require("./client"); 
-const { setupInput } = require("./input");  
+const { setupInput,} = require("./input");  
 
 console.log("connecting..."); 
-connect(); 
-setupInput(); 
+let connection = connect(); 
+setupInput(connection); 
