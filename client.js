@@ -1,11 +1,11 @@
 const { Server } = require("http");
 const net = require("net"); 
-const { IP, HOST } = require("./constants"); 
+const { IP, HOST, PORT } = require("./constants"); 
 
 const connect = function () {
   const conn = net.createConnection({
-    host: HOST,
-    port: IP,
+    host: IP,
+    port: PORT,
   });
 
   conn.setEncoding("utf8");
