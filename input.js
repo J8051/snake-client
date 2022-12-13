@@ -17,8 +17,12 @@ const setupInput = function (conn) {
       conn.write('Move: left');
     } else if (key === "s") {
       conn.write("Move: down")
-    } else if (key === "d") { 
-      conn.write('Move: right'); 
+    } else if (key === "d") {
+      conn.write('Move: right');
+    } else if (key === "q") {
+      conn.write('Say: wrongKey!')
+    } else if (key === "e") { 
+      conn.write('Say: finger ssssslip!')
     }
   };
   stdin.on("data", handleUserInput);
