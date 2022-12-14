@@ -1,13 +1,16 @@
 const { isGeneratorFunction } = require("util/types");
 // Stores the active TCP connection object.
 let connection;
-// setup interface to handle user input from stdin
+// Setup interface to handle user input from stdin
+// The conn parameter is the connection object to the server 
 const setupInput = function (conn) { 
   connection = conn; 
   const stdin = process.stdin; 
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
   stdin.resume();
+  
+  // This function handles keypress input from the user
   const handleUserInput = function (key) {
     if (key === '\u0003') {
       process.exit();
@@ -28,7 +31,7 @@ const setupInput = function (conn) {
   stdin.on("data", handleUserInput);
   return stdin;
 };
-
+// This exports the setupInput
 module.exports = {
 setupInput,
 };
