@@ -9,7 +9,7 @@ Before you can run this client, you will need to be running the server side whic
 ## Final Product
 
 ![<img alt="Snake Game opening screen" width="40px" src="snake_image.png" />](Opening image of snake game)(#)
-![<img alt="Snake Game in action" width="40px" src="snake_image_2.png " />](snake game in action)(#)
+![<img alt="Snake Game in action" width="40px" src="snake_image_two.png" />](Snake game in action)(#)
 
 
 
